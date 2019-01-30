@@ -23,3 +23,12 @@ imprimirNombreEnMayusculas({ nombre: 'Pepito' });
 //Errores
 //imprimirNombreEnMayusculas();
 //imprimirNombreEnMayusculas({ apellido: 'Pérez' });
+
+function imprimirNombreYEdad(otraPersona) {
+  var { nombre } = otraPersona;
+  var { edad } = otraPersona;
+  console.log(`${nombre} tiene ${edad} anos`);
+}
+
+imprimirNombreYEdad(alex);
+imprimirNombreYEdad(juli);
