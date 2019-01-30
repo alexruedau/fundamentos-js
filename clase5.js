@@ -11,7 +11,9 @@ var juli = {
 }
 
 
-function imprimirNombreEnMayusculas({ nombre }) {
+function imprimirNombreEnMayusculas(persona) {
+  // var nombre = persona.nombre se puede reemplazar por
+  var { nombre } = persona;
   console.log(nombre.toUpperCase());
 }
 
