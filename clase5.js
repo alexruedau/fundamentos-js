@@ -24,6 +24,7 @@ imprimirNombreEnMayusculas({ nombre: 'Pepito' });
 //imprimirNombreEnMayusculas();
 //imprimirNombreEnMayusculas({ apellido: 'Pérez' });
 
+//////////////////Ésto es un reto////////////////////
 function imprimirNombreYEdad(otraPersona) {
   var { nombre } = otraPersona;
   var { edad } = otraPersona;
@@ -32,9 +33,10 @@ function imprimirNombreYEdad(otraPersona) {
 
 imprimirNombreYEdad(alex);
 imprimirNombreYEdad(juli);
+/////////////////////////////////////////////////////
 
 
-function cumple (persona) {
+function cumple(persona) {
   return {
     ...persona,
     edad: persona.edad + 1
