@@ -32,3 +32,14 @@ function imprimirProfesiones(persona) {
 }
 
 imprimirProfesiones(alex);
+
+function imprimirSiEsMayorDeEdad(persona){
+  console.log(`${persona.nombre} es:`);
+  if (persona.edad < 18) {
+    console.log('Menor de edad');
+  } else {
+    console.log('Mayor de edad');
+  }
+}
+
+imprimirSiEsMayorDeEdad(alex);
