@@ -1,7 +1,7 @@
 var alex = {
   nombre: 'Alex',
   apellido: 'Rueda U.',
-  edad: 9,
+  edad: 29,
   ingeniero: false,
   cocinero: false,
   cantante: false,
@@ -57,6 +57,8 @@ imprimirSiEsMayorDeEdad(alex);
 
 function permitirAcceso(persona) {
   if (!esMayorDeEdad(persona)) {
-    console.log('Acceso Denegado')
+    console.log('Acceso Denegado');
+  } else {
+    console.log('Acceso Aprobado');
   }
 }
