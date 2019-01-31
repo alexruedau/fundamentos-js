@@ -1,7 +1,7 @@
 var alex = {
   nombre: 'Alex',
   apellido: 'Rueda U.',
-  edad: 29,
+  edad: 9,
   ingeniero: false,
   cocinero: false,
   cantante: false,
@@ -33,19 +33,30 @@ function imprimirProfesiones(persona) {
 
 imprimirProfesiones(alex);
 
+//////////////////////////////////////////////////
+
 const MAYORIA_DE_EDAD = 18;
 
-function esMenorDeEdad (persona) {
-  return persona.edad < MAYORIA_DE_EDAD;
-}
+const esMayorDeEdad = ({ edad }) => edad >= MAYORIA_DE_EDAD;
+
+//son equivalentes éstas funciones on algunas diferencias
+// const esMenorDeEdad = function  (persona) {
+//   return persona.edad < MAYORIA_DE_EDAD;
+// }
 
 function imprimirSiEsMayorDeEdad(persona){
 
-  if (esMenorDeEdad(persona)) {
-    console.log(`${persona.nombre} es menor de edad`);
-  } else {
+  if (esMayorDeEdad(persona)) {
     console.log(`${persona.nombre} es mayor de edad`);
+  } else {
+    console.log(`${persona.nombre} es menor de edad`);
   }
 }
 
 imprimirSiEsMayorDeEdad(alex);
+
+function permitirAcceso(persona) {
+  if (!esMayorDeEdad(persona)) {
+    console.log('Acceso Denegado')
+  }
+}
