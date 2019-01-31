@@ -33,12 +33,18 @@ function imprimirProfesiones(persona) {
 
 imprimirProfesiones(alex);
 
+const MAYORIA_DE_EDAD = 18;
+
+function esMenorDeEdad (persona) {
+  return persona.edad < MAYORIA_DE_EDAD;
+}
+
 function imprimirSiEsMayorDeEdad(persona){
-  console.log(`${persona.nombre} es:`);
-  if (persona.edad < 18) {
-    console.log('Menor de edad');
+
+  if (esMenorDeEdad(persona)) {
+    console.log(`${persona.nombre} es menor de edad`);
   } else {
-    console.log('Mayor de edad');
+    console.log(`${persona.nombre} es mayor de edad`);
   }
 }
 
