@@ -49,18 +49,19 @@ var personasBajas = personas.filter(esBaja);
 //   return persona.estatura >= 1.7
 // })
 
-const pasarEstaturaACms = persona => {
+//como se desea devolver un objeto se debe "envolver en paréntesis"
+//y no solo devolver un return
+const pasarEstaturaACms = persona => ({
+  ...persona,
+  estatura: persona.estatura * 100
   //conservando ésta función se modifica la estatura de cada colección de datos
   // persona.estatura *= 100;
   // return persona;
 
   //De ésta forma solo convertimos la estatura a cms cuando
   //se haga un llamado a la función
-  return {
-    ...persona,
-    estatura: persona.estatura *100
-  }
-}
+
+})
 
 var personasCms = personas.map(pasarEstaturaACms)
 
