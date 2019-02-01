@@ -49,5 +49,21 @@ var personasBajas = personas.filter(esBaja);
 //   return persona.estatura >= 1.7
 // })
 
-console.log(personasAltas);
-console.log(personasBajas);
+const pasarEstaturaACms = persona => {
+  //conservando ésta función se modifica la estatura de cada colección de datos
+  // persona.estatura *= 100;
+  // return persona;
+
+  //De ésta forma solo convertimos la estatura a cms cuando
+  //se haga un llamado a la función
+  return {
+    ...persona,
+    estatura: persona.estatura *100
+  }
+}
+
+var personasCms = personas.map(pasarEstaturaACms)
+
+// console.log(personasAltas);
+// console.log(personasBajas);
+console.log(personasCms)
