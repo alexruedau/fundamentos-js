@@ -1,13 +1,20 @@
-function Persona(nombre, apellido) {
+function Persona(nombre, apellido, estatura) {
   this.nombre = nombre
   this.apellido = apellido
+  this.estatura = estatura
 }
 
-Persona.prototype.saludar = function () {
+Persona.prototype.saludar = () => {
   console.log(`Hola me llamo ${this.nombre} ${this.apellido}`)
 }
 
-var alex = new Persona('Alex', 'Rueda U.')
-var juli = new Persona('Julika', 'Klepp')
+Persona.prototype.soyAlto = () => this.estatura >= 1.7
+
+
+var alex = new Persona('Alex', 'Rueda U.', 1.70)
+var juli = new Persona('Julika', 'Klepp', 1.65)
+
+alex.soyAlto()
+juli.soyAlto()
 
 //alex.saludar()
