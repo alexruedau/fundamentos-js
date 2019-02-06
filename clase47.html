@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Clase 47 - Estructuras de datos inmutables</title>
+  </head>
+  <body>
+    <script>
+      const alex = {
+        nombre: 'Alex',
+        apellido: 'Rueda U.',
+        edad: 29
+      }
+
+      //const cumple = persona => persona.edad++
+
+      const cumpleInmutable = persona => ({
+        ...persona,
+        edad: persona.edad + 1
+      })
+    </script>
+  </body>
+</html>
