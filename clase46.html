@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Clase 46 - Entiende los closures de JavaScript</title>
+  </head>
+  <body>
+    <script>
+
+
+      function crearSaludo(finalDeFrase) {
+        return function (nombre){
+          console.log(`Hola ${nombre} ${finalDeFrase}`);
+        }
+      }
+
+      const saludoColombiano = crearSaludo('parce')
+      const saludoMexicano = crearSaludo('güey')
+      const saludoArgentino = crearSaludo('che')
+
+      saludoColombiano('Alex')
+      saludoMexicano('Alex')
+      saludoArgentino('Alex')
+    </script>
+  </body>
+</html>
